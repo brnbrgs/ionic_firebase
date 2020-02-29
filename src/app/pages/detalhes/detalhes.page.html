@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalhes</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content padding>
+  <ion-list lines="full">
+    <ion-item>
+      <ion-input required type="text" placeholder="Nome" [(ngModel)]="todo.nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input required type="number" placeholder="Idade" [(ngModel)]="todo.idade"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-select placeholder="Selecione o gênero" [(ngModel)]="todo.sexo">
+        <ion-select-option value="fem">Feminino</ion-select-option>
+        <ion-select-option value="masc">Masculino</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="saveTodo()">Save</ion-button>
+</ion-content>
